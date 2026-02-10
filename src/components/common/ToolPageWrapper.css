@@ -1,0 +1,33 @@
+.tool-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.tool-page-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.tool-page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.tool-page-desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.tool-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .tool-page-title {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,196 @@
+.annotator-auto-notice {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.annotator-preview {
+  text-align: center;
+  background: #e8e8e8;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annotator-preview-img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: var(--radius-sm);
+}
+
+.annotator-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.annotator-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.annotator-field--half {
+  flex: 1;
+  min-width: 0;
+}
+
+.annotator-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.annotator-input {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.annotator-input:focus {
+  border-color: var(--color-primary);
+}
+
+.annotator-hint {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.annotator-mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.annotator-mode-btn {
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.15s;
+}
+
+.annotator-mode-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.annotator-mode-btn--active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.annotator-position-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.annotator-position-btn {
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.15s;
+}
+
+.annotator-position-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.annotator-position-btn--active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.annotator-row {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.annotator-slider {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+.annotator-color-picker {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.annotator-color-picker input[type="color"] {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 2px;
+}
+
+.annotator-color-picker span {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-family: monospace;
+}
+
+.annotator-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+}
+
+.annotator-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.15s;
+}
+
+.annotator-btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.annotator-btn--primary:hover {
+  opacity: 0.9;
+}
+
+.annotator-btn--secondary {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.annotator-btn--secondary:hover {
+  background: #ccc;
+}
+
+@media (max-width: 768px) {
+  .annotator-row {
+    flex-direction: column;
+  }
+}

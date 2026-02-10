@@ -1,0 +1,229 @@
+.url-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.url-input-row {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.url-input {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.url-input:focus {
+  border-color: var(--color-primary);
+}
+
+.url-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.url-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.url-btn--primary {
+  background: var(--color-primary);
+  color: white;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+.url-btn--primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.url-btn--copy {
+  background: var(--color-accent);
+  color: white;
+}
+
+.url-btn--copy:hover {
+  opacity: 0.9;
+}
+
+.url-btn--text {
+  background: none;
+  color: var(--color-error);
+  font-size: 13px;
+  padding: var(--spacing-xs);
+}
+
+.url-btn--text:hover {
+  text-decoration: underline;
+}
+
+.url-btn--small {
+  font-size: 12px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.url-btn--small:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.url-btn--danger {
+  background: #ffebee;
+  color: var(--color-error);
+}
+
+.url-btn--danger:hover {
+  background: var(--color-error);
+  color: white;
+}
+
+.url-error {
+  color: var(--color-error);
+  font-size: 13px;
+}
+
+.url-result {
+  padding: var(--spacing-lg);
+  background: var(--color-accent-light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-accent);
+}
+
+.url-result-main {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.url-result-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.url-result-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.url-result-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent);
+  word-break: break-all;
+}
+
+.url-result-qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.url-result-qr-img {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.url-history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.url-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.url-history-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.url-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.url-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.url-history-item-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.url-history-short {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.url-history-long {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.url-history-date {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.url-history-item-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .url-input-row {
+    flex-direction: column;
+  }
+
+  .url-history-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .url-history-item-actions {
+    justify-content: flex-end;
+  }
+}
