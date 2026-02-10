@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { ToolId } from './types';
 import { Layout } from './components/common/Layout';
 import { ImageAnnotator } from './components/image-annotator/ImageAnnotator';
@@ -8,8 +8,20 @@ import { ImageUpscaler } from './components/image-upscaler/ImageUpscaler';
 import { UrlShortener } from './components/url-shortener/UrlShortener';
 import './App.css';
 
+const TOOL_TITLES: Record<ToolId, string> = {
+  'annotator': '画像出典追加ツール',
+  'bg-removal': '背景削除ツール',
+  'converter': '画像形式変換ツール',
+  'upscaler': '画像高画質化ツール',
+  'url-qr': 'URL短縮・QRコード生成ツール',
+};
+
 function App() {
   const [activeTool, setActiveTool] = useState<ToolId>('annotator');
+
+  useEffect(() => {
+    document.title = `${TOOL_TITLES[activeTool]} | レポートツールキット`;
+  }, [activeTool]);
 
   const renderTool = () => {
     switch (activeTool) {

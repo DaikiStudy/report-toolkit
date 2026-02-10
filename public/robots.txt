@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daikistudy.github.io/report-toolkit/sitemap.xml
