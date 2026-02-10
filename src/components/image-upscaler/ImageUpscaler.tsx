@@ -64,7 +64,7 @@ export function ImageUpscaler() {
   }, [reset, resultUrl]);
 
   return (
-    <ToolPageWrapper title="画像高画質化" description="小さい・低画質な画像を拡大し、シャープ化で画質を向上させます。">
+    <ToolPageWrapper title="画像高画質化" description="小さい・低画質な画像を拡大し、シャープ化で画質を向上させます。" howToUse={['画像をドラッグ&ドロップするか、クリックしてファイルを選択します', '拡大倍率（2x / 3x / 4x）を選択します', 'シャープ化をONにすると、拡大時のぼやけを軽減できます', '元画像と結果を並べて比較し、「ダウンロード」で保存します']}>
       {!imageUrl ? (
         <ImageDropZone onImageSelect={handleFileWithSize} />
       ) : (

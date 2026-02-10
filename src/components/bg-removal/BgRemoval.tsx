@@ -51,7 +51,7 @@ export function BgRemoval() {
   }, [reset, resultUrl]);
 
   return (
-    <ToolPageWrapper title="背景削除" description="画像の外枠の外側の背景色を削除します。イラスト内部の色はそのまま保持されます。">
+    <ToolPageWrapper title="背景削除" description="画像の外枠の外側の背景色を削除します。イラスト内部の色はそのまま保持されます。" howToUse={['画像をドラッグ&ドロップするか、クリックしてファイルを選択します', '画像の四隅の色を背景色として検出し、外側から透明にします', '許容値スライダーで背景除去の強さを調整できます（値が大きいほど広範囲を除去）', '結果を確認し、「ダウンロード」で透過PNG画像を保存します']}>
       {!imageUrl ? (
         <ImageDropZone onImageSelect={handleFile} />
       ) : (

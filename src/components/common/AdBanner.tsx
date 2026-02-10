@@ -27,6 +27,8 @@ export function AdBanner({ slot, format = 'horizontal', className }: AdBannerPro
     }
   }, [adSlotId]);
 
+  const adFormat = format === 'vertical' ? 'vertical' : format === 'rectangle' ? 'rectangle' : 'horizontal';
+
   if (AD_CLIENT && adSlotId) {
     return (
       <div className={`ad-banner ad-banner--${format} ${className || ''}`} ref={adRef}>
@@ -35,8 +37,8 @@ export function AdBanner({ slot, format = 'horizontal', className }: AdBannerPro
           style={{ display: 'block' }}
           data-ad-client={AD_CLIENT}
           data-ad-slot={adSlotId}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
+          data-ad-format={adFormat}
+          data-full-width-responsive={format === 'horizontal' ? 'true' : 'false'}
         />
       </div>
     );

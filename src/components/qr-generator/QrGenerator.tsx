@@ -44,7 +44,7 @@ export function QrGenerator() {
   }, [qrUrl]);
 
   return (
-    <ToolPageWrapper title="QRコード生成" description="URLやテキストからQRコードを作成します">
+    <ToolPageWrapper title="QRコード生成" description="URLやテキストからQRコードを作成します" howToUse={['QRコードにしたいURLやテキストを入力します', 'サイズ、前景色、背景色を自由にカスタマイズできます', 'リアルタイムでプレビューが更新されます', '「PNGダウンロード」で画像として保存できます']}>
       <div className="qr-input-section">
         <div className="qr-field">
           <label className="qr-label">URL またはテキスト</label>

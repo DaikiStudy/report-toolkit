@@ -79,7 +79,7 @@ export function UrlShortener() {
   }, [setHistory]);
 
   return (
-    <ToolPageWrapper title="URL短縮 & QRコード" description="URLを短縮し、QRコードを同時に生成します">
+    <ToolPageWrapper title="URL短縮 & QRコード" description="URLを短縮し、QRコードを同時に生成します" howToUse={['短縮したいURLを入力欄に貼り付けます', '「短縮 & QR生成」ボタンを押すと、短縮URLとQRコードが同時に生成されます', '短縮URLの横のコピーボタンでクリップボードにコピーできます', 'QRコードはPNG画像としてダウンロードできます。履歴は自動保存されます']}>
       <div className="url-input-section">
         <div className="url-input-row">
           <input

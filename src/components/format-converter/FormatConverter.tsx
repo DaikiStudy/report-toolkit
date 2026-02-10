@@ -53,7 +53,7 @@ export function FormatConverter() {
   }, [reset, result]);
 
   return (
-    <ToolPageWrapper title="画像形式変換" description="画像をPNG・JPEG・WebP形式に変換します">
+    <ToolPageWrapper title="画像形式変換" description="画像をPNG・JPEG・WebP形式に変換します" howToUse={['画像をドラッグ&ドロップするか、クリックしてファイルを選択します', '変換先の形式（PNG / JPEG / WebP）を選択します', 'JPEG・WebPの場合は品質スライダーで圧縮率を調整できます（低いほどファイルサイズが小さい）', '変換後のファイルサイズが表示されるので、元画像との比較ができます']}>
       {!imageUrl ? (
         <ImageDropZone onImageSelect={handleFile} />
       ) : (

@@ -119,7 +119,7 @@ export function ImageAnnotator() {
   }, []);
 
   return (
-    <ToolPageWrapper title="画像出典ツール" description="画像に出典情報をオーバーレイ。Webから画像をコピペすると出典を自動取得。ファイル選択時は手入力できます。">
+    <ToolPageWrapper title="画像出典ツール" description="画像に出典情報をオーバーレイ。Webから画像をコピペすると出典を自動取得。ファイル選択時は手入力できます。" howToUse={['Webブラウザで画像を右クリック→コピーし、このページでCtrl+Vで貼り付けると出典が自動取得されます', 'ファイルから選択した場合は、ページタイトルやURLを手動で入力してください', '表示内容（タイトルのみ/URLのみ/両方）、文字サイズ、位置、色を自由に調整できます', '設定が反映されたプレビューを確認し、「ダウンロード」でPNG画像を保存します']}>
       {!imageUrl ? (
         <ImageDropZone onImageSelect={handleFile} onPasteHtml={handlePasteHtml} />
       ) : (
